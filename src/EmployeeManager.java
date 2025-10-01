@@ -15,7 +15,10 @@ public class EmployeeManager {
     {
         employeeData.put(employee.getId(),employee);
     }
-
+    public Optional<Employee> getEmployeeById(int id)
+    {
+        return Optional.ofNullable(employeeData.get(id));
+    }
     public List<Employee> getAllEmployee(){
         return new ArrayList<>(employeeData.values());
     }
